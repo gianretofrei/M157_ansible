@@ -1,0 +1,13 @@
+#cloud-config
+users:
+  - default
+  - name: ansible
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDb/uJczCjSl1+J855GgttiTSz1Prp8Ig+k/q21V7i8ucTRQ3dCKHIyGcfMgBtgHBdTIgp8YmNqRL+z/XsOpbEEF2IufOoeXdWwt+yRIN91E4nkGjJpHIozSPGuaal5boUxWvBRGtYP2lBDWzxLb19rXDWURs9uK7PNj4GvJjzwtU1um7S2iZopkQCDLb8nuMRVHN+J/U5PUVT78EjQbv/Kpb3lar+8xFDaoVGAcvkUpTWDENozuRLI6aKX2DwWXWq5V+s1KBRDC89cIBwd04yxdyVwN4UgqTDTuuFVWJJCgas9X/dDF6EVJoNBLTWHNzbwR9opb9ewD1Xt2Mvjyl2o9V62aXUxaRxm3x82pFurb8/OkXu60Dx0qWXwirRqoGNQCjbuWy+3Z9JoOi2TuAUKqE0TZOYsu5KE0GKMguRJtr3Tccn5AGT/9MqKR6z2rbXXKLK3GybLPCnjAOjfS+KlFf9XEun2wBI3LvmUNNDRN4oh5wRiANMRVLGSlk5aFdc= gian-reto.frei@lernende.bbw.ch
+packages:
+  - python-pip
+  - git
+  - ansible
+runcmd:
+  - sudo pip install ansible
